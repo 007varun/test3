@@ -4,6 +4,8 @@ import 'airway.dart';
 import 'breathing.dart';
 import 'circulation.dart';
 import 'disability.dart';
+import 'exposure.dart';
+
 class Home extends StatefulWidget {
   static String id = "home";
   @override
@@ -18,7 +20,7 @@ class _HomeState extends State<Home> {
         title: Text("Home"),
       ),
       body: Padding(
-        padding: EdgeInsets.symmetric(vertical: 200),
+        padding: EdgeInsets.symmetric(vertical: 20),
         child: ListView(
           children: <Widget>[
             Btn(
@@ -46,6 +48,13 @@ class _HomeState extends State<Home> {
                   new MaterialPageRoute(
                       builder: (context) => new disability()));
             },),
+            Btn(text: "Exposure",onPressed: (){
+              Navigator.push(
+                  context,
+                  new MaterialPageRoute(
+                      builder: (context) => new exposure()));
+            },),
+
           ],
         ),
       ),

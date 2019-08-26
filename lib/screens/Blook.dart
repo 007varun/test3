@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:test3/components/button.dart';
 import 'Blisten.dart';
 import 'Bfeel.dart';
-
+import 'home.dart';
 class Blook extends StatefulWidget {
   static String id = "airway";
   @override
@@ -725,6 +725,13 @@ class BlookState extends State<Blook> {
               ],
             ),
           ),
+          Btn(
+            text: "Home",
+            onPressed: () {
+              Navigator.push(context,
+                  new MaterialPageRoute(builder: (context) => new Home()));
+            },
+          )
         ],
       ),
     );

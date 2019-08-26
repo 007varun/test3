@@ -3,7 +3,7 @@ import 'package:test3/components/button.dart';
 import 'Clisten.dart';
 import 'Clook.dart';
 import 'feel.dart';
-
+import 'home.dart';
 class Cfeel extends StatefulWidget {
   @override
   _CfeelState createState() => _CfeelState();
@@ -855,6 +855,13 @@ class _CfeelState extends State<Cfeel> {
                 ],
               )
           ),
+          Btn(
+            text: "Home",
+            onPressed: () {
+              Navigator.push(context,
+                  new MaterialPageRoute(builder: (context) => new Home()));
+            },
+          )
 
         ],
       ),

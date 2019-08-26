@@ -1,9 +1,10 @@
+
 import 'package:flutter/material.dart';
 import 'package:test3/components/button.dart';
 import 'listen.dart';
 import 'Blook.dart';
 import 'Bfeel.dart';
-
+import 'Home.dart';
 class Blisten extends StatefulWidget {
   @override
   _BlistenState createState() => _BlistenState();
@@ -646,6 +647,13 @@ class _BlistenState extends State<Blisten> {
               ],
             ),
           ),
+          Btn(
+            text: "Home",
+            onPressed: () {
+              Navigator.push(context,
+                  new MaterialPageRoute(builder: (context) => new Home()));
+            },
+          )
         ],
       ),
     );

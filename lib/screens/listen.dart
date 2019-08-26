@@ -3,7 +3,7 @@ import 'package:test3/components/button.dart';
 import 'look.dart';
 import 'feel.dart';
 import 'package:test3/components/checkbox.dart';
-
+import 'home.dart';
 class AListen extends StatefulWidget {
   @override
   _AListenState createState() => _AListenState();
@@ -857,6 +857,13 @@ class _AListenState extends State<AListen> {
               ],
             ),
           ),
+          Btn(
+            text: "Home",
+            onPressed: () {
+              Navigator.push(context,
+                  new MaterialPageRoute(builder: (context) => new Home()));
+            },
+          )
 //      OutlineButton(onPressed: ()
 //         {
 //            setState(() {

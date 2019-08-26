@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:test3/components/button.dart';
 import 'listen.dart';
 import 'feel.dart';
-
+import 'home.dart';
 bool swelling = false, deformity = false, injuries = false, others = false;
 bool secretions =false,vomiting =false,blood =false;
 
@@ -132,6 +132,7 @@ class _ALookState extends State<ALook> {
                         Checkbox(
                             value: swelling,
                             onChanged: (bool val) {
+                              print("swelling");
                               setState(() {
                                 swelling = val;
                                 v1 = val;
@@ -696,6 +697,13 @@ class _ALookState extends State<ALook> {
 
                 ],
               )),
+          Btn(
+            text: "Home",
+            onPressed: () {
+              Navigator.push(context,
+                  new MaterialPageRoute(builder: (context) => new Home()));
+            },
+          )
         ],
       ),
     );

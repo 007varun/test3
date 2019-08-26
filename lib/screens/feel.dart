@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:test3/components/button.dart';
 import 'listen.dart';
+import 'home.dart';
 import 'look.dart';
 class AFeel extends StatefulWidget {
   @override
@@ -62,6 +63,7 @@ class _AFeelState extends State<AFeel> {
                 child: Btn(
                   text: "manual",
                   onPressed: () {
+                    print("manual pressed");
                     setState(() {
                       man = true;
                       nman = false;
@@ -97,8 +99,10 @@ class _AFeelState extends State<AFeel> {
                         Checkbox(
                             value: fswelling,
                             onChanged: (bool val) {
+
                               setState(() {
                                 fswelling = val;
+
                                 u1 = val;
                               });
                             }),
@@ -124,6 +128,7 @@ class _AFeelState extends State<AFeel> {
                               Checkbox(
                                   value: fforbod[0][0],
                                   onChanged: (bool val) {
+                                    print("swelling");
                                     setState(() {
                                       fforbod[0][0] = val;
                                     });
@@ -412,6 +417,13 @@ class _AFeelState extends State<AFeel> {
               )
 
             ],
+          ),
+          Btn(
+            text: "Home",
+            onPressed: () {
+              Navigator.push(context,
+                  new MaterialPageRoute(builder: (context) => new Home()));
+            },
           )
 
 

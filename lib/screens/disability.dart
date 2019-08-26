@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:test3/components/button.dart';
-
+import 'home.dart';
 import 'package:test3/components/checkbox.dart';
 
 class disability extends StatefulWidget {
@@ -1102,6 +1102,13 @@ class _disabilityState extends State<disability> {
 //              inUse=simple;
 //            });
 //         }),
+          Btn(
+            text: "Home",
+            onPressed: () {
+              Navigator.push(context,
+                  new MaterialPageRoute(builder: (context) => new Home()));
+            },
+          )
         ],
       ),
     );

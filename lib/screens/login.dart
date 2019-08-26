@@ -3,7 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'home.dart';
 import 'package:modal_progress_hud/modal_progress_hud.dart';
 import 'registration.dart';
-
+import 'home.dart';
 class LoginScreen extends StatefulWidget {
   static String id = 'loginScreen';
   @override
